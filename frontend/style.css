@@ -15,7 +15,7 @@ nav a {
     color: #333;
 }
 
-.quest-board {
+.quest-board{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -25,9 +25,29 @@ nav a {
     background-size: cover;
     border: 2px solid #5d4037; 
     border-radius: 10px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    
 }
 
-.quest-item {
+ .class-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+    padding: 10px;
+    background: url('https://img.freepik.com/free-vector/watercolor-chinese-style-background_23-2149699410.jpg?size=626&ext=jpg&ga=GA1.1.2116175301.1719619200&semt=ais_user') no-repeat center center; 
+    background-size: cover;
+    border: 2px solid #5d4037; 
+    border-radius: 10px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    
+}
+
+.quest-item{
     background-color: #fff8dc; 
     border: 1px solid #5d4037; 
     background-image: url('https://t4.ftcdn.net/jpg/01/39/41/39/360_F_139413993_vN0fQz14ZmJBSnQa2CEcDGaWZEnC5FEr.jpg');
@@ -39,16 +59,30 @@ nav a {
     font-family: 'Courier New', Courier, monospace; 
 }
 
-.quest-item h3 {
+
+.class-item{
+    background-color: #fff8dc; 
+    border: 1px solid #5d4037; 
+    background-image: url('https://media.istockphoto.com/id/1430878163/vector/distressed-black-texture.jpg?s=612x612&w=0&k=20&c=D0Ammw7W2D9RxlZfDCU4XsHCqqNE___ES-FGCkMXRU4=');
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: 250px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+
+.quest-item h3, .class-item h3 {
     margin: 0 0 10px 0;
     font-size: 1.2em;
 }
 
-.quest-item p, .quest-item ul {
+.quest-item  p, .quest-item ul ,.class-item p, .class-item ul{
     margin: 5px 0;
 }
 
-.quest-item button {
+.quest-item button, .class-item button{
     background-color: #5d4037;
     color: white;
     border: none;
@@ -58,7 +92,7 @@ nav a {
     font-size: 1em;
 }
 
-.quest-item button:hover {
+.quest-item button:hover, .class-item button:hover {
     background-color: #4b3621;
 }
 
@@ -76,5 +110,62 @@ nav a {
     margin-top: 20px;
 }
 
+
+
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header, nav, footer {
+    text-align: center;
+    margin: 20px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+    
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    background: url('https://img.pikbest.com/wp/202343/high-resolution-white-natural-marble-texture-a-luxurious-background-for-skin-tile-wallpaper-and-design-artwork_9981292.jpg!sw800') ; 
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 

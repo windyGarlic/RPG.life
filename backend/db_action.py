@@ -85,3 +85,59 @@ def get_user_rewards(user_id):
 
 def get_user_reward_by_id(user_reward_id):
     return UserRewards.query.get(user_reward_id)
+
+def delete_user(user_id):
+    user = Users.query.get(user_id)
+    if user:
+        db.session.delete(user)
+        db.session.commit()
+        return True
+    return False
+
+def delete_task(task_id):
+    task = Tasks.query.get(task_id)
+    if task:
+        db.session.delete(task)
+        db.session.commit()
+        return True
+    return False
+
+def delete_user_task(user_task_id):
+    user_task = UserTasks.query.get(user_task_id)
+    if user_task:
+        db.session.delete(user_task)
+        db.session.commit()
+        return True
+    return False
+
+def delete_class(class_id):
+    class_ = Classes.query.get(class_id)
+    if class_:
+        db.session.delete(class_)
+        db.session.commit()
+        return True
+    return False
+
+def delete_user_class(user_class_id):
+    user_class = UserClasses.query.get(user_class_id)
+    if user_class:
+        db.session.delete(user_class)
+        db.session.commit()
+        return True
+    return False
+
+def delete_reward(reward_id):
+    reward = Rewards.query.get(reward_id)
+    if reward:
+        db.session.delete(reward)
+        db.session.commit()
+        return True
+    return False
+
+def delete_user_reward(user_reward_id):
+    user_reward = UserRewards.query.get(user_reward_id)
+    if user_reward:
+        db.session.delete(user_reward)
+        db.session.commit()
+        return True
+    return False

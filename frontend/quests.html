@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
-    <link rel="stylesheet" href="style.css"> 
+    <title>Quests</title>
+    <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <script src="quests.js"></script>
-
 </head>
 <body>
     <header>
@@ -20,15 +19,36 @@
         <a href="quests.html">Quests</a>
         <a href="stats.html">Stats</a>
         <a href="#">Shop</a>
-
     </nav>
 
     <main>
-        <h2>Main Story</h2>
-        <button>New Quest</button>
+        <h2>Quest Board</h2>
+        <button id="new-quest-btn">New Quest</button>
         <div class="quest-board"></div>
 
     </main>
+
+    <div id="quest-form-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <form id="quest-form">
+                <label for="description">Description:</label>
+                <input type="text" id="description" name="description" required>
+                <br>
+                <label for="difficulty">Difficulty:</label>
+                <input type="text" id="difficulty" name="difficulty" required>
+                <br>
+                <label for="experience_reward">Experience Reward:</label>
+                <input type="number" id="experience_reward" name="experience_reward" required>
+                <br>
+                <label for="currency_reward">Currency Reward:</label>
+                <input type="number" id="currency_reward" 
+                name="currency_reward" required>
+                <br>
+                <button type="submit">Add Quest</button>
+            </form>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2024 WindyGarlic</p>
